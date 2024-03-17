@@ -1,0 +1,29 @@
+
+{
+  "products": [
+    {
+      "id": "33bf",
+      "name": "test",
+      "quantity": "28",
+      "referance": "test-2"
+    },
+    {
+      "id": "4de5",
+      "name": "test1",
+      "quantity": 2,
+      "referance": "tw---?\\n"
+    },
+    {
+      "id": "26db",
+      "name": "screetds",
+      "quantity": 13,
+      "referance": "msps112"
+    }
+  ],
+  "users": [
+    {
+      "username": "test",
+      "password": "test"
+    }
+  ]
+}
