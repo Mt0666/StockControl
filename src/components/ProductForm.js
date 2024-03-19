@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const ProductForm = ({ onAddProduct }) => {
     const [name, setName] = useState('');
@@ -40,8 +41,8 @@ const ProductForm = ({ onAddProduct }) => {
                 </div>
                 <button className='btn btn-outline-dark' type="submit">Add Product</button>
             </div>
-           
         </form>
+        
     );
 };
 
