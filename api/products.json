@@ -1,29 +1,41 @@
-
 {
   "products": [
     {
       "id": "33bf",
       "name": "test",
-      "quantity": "28",
+      "quantity": "11",
       "referance": "test-2"
     },
     {
       "id": "4de5",
       "name": "test1",
-      "quantity": 2,
+      "quantity": "22",
       "referance": "tw---?\\n"
     },
     {
       "id": "26db",
       "name": "screetds",
-      "quantity": 13,
+      "quantity": "33",
       "referance": "msps112"
+    },
+    {
+      "id": "a350",
+      "name": "Screw Driver",
+      "quantity": "44",
+      "referance": "msps12"
+    },
+    {
+      "id": "a47a",
+      "name": "hhh",
+      "quantity": "55",
+      "referance": "msac13"
     }
   ],
   "users": [
     {
       "username": "test",
-      "password": "test"
+      "password": "test",
+      "id": "f667"
     }
   ]
 }

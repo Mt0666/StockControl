@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Product from './Product';
 import ProductForm from './ProductForm'; // ProductForm bileşenini burada içe aktardık
 import { Navigate } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 
 const Products = () => {
@@ -16,6 +17,8 @@ const Products = () => {
     const [alert, setAlert] = useState('');
     const [loader, setLoader] = useState(false);
     const [isLogin,setIsLogin] = useState(isAuthenticated());
+    const [searchedProducts,setSearchedProducts] =  useState([]);
+    
     useEffect(() => {
         if(checkUser()){
            getProducts();
@@ -40,7 +43,13 @@ const Products = () => {
       };
 
     const getProducts = () => {
-        fetch('http://localhost:3001/products').then(response => response.json()).then((products) => setProducts(products)).catch(err => {setAlert(showAlert(false,"Ürün listesine erişilemiyor"))});
+        fetch('http://localhost:3001/products')
+        .then(response => response.json())
+        .then((products) => {
+            setProducts(products);
+            setSearchedProducts(products);
+        })
+        .catch(err => {setAlert(showAlert(false,"Ürün listesine erişilemiyor"))});
     };
 
 
@@ -109,6 +118,12 @@ const Products = () => {
             });
     };
 
+    const searchProduct =(searchText) =>{
+        setSearchedProducts(products.filter((product)=> {
+            return product.name.toLowerCase().includes(searchText.toLowerCase()) || product.referance.toLowerCase().includes(searchText.toLowerCase());
+        }))
+    }
+
     return (
         !isLogin ? <Navigate to="/login"/> : <div className='d-flex flex-column'>
         {alert !== '' ? alert : ''}
@@ -117,6 +132,7 @@ const Products = () => {
             <button className='btn btn-outline-dark ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Log Out</button>
         </div>
         <ProductForm onAddProduct={saveProduct} /> {/* ProductForm bileşenini burada kullandık */}
+        <SearchBar  onSearch={searchProduct}/> 
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -127,7 +143,7 @@ const Products = () => {
                 </tr>
             </thead>
             <tbody>
-                {products.map((product) => (
+                {searchedProducts.map((product) => (
                     <Product
                         productId={product.id}
                         key={product.id}
