@@ -1,0 +1,28 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td{
+    text-align: center;
+    padding: 8px;
+    width: 25%; /* 4 sütun varsa her sütunun genişliği %25 olacak */
+  }
+
+.table tbody tr{
+    text-align: center;
+}
+
+  /* Butonları özelleştir (isteğe bağlı) */
+  .table td:last-child button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* İsteğe bağlı: Butonların arasındaki boşlukları ayarla */
+  .table td:last-child button + button {
+    margin-left: 10px;
+  }
+
+  

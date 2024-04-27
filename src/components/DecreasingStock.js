@@ -127,9 +127,10 @@ const Products = () => {
     return (
         !isLogin ? <Navigate to="/login"/> : <div className='d-flex flex-column'>
         {alert !== '' ? alert : ''}
-        <div className='d-flex mt-3'>
+        <div className='d-flex'>
+        <button className='btn btn-outline-danger ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Orders</button>
             <h2 className='text-center flex-grow-1 m-0'><Link to={"/products"} replace={true} style={{textDecoration:"none", color:"inherit"}}>Product List</Link></h2>
-            <button className='btn btn-outline-dark ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Log Out</button>
+            <button className='btn btn-outline-danger ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Logout</button>
         </div>
         <ProductForm onAddProduct={saveProduct} /> {/* ProductForm bileşenini burada kullandık */}
         <SearchBar  onSearch={searchProduct}/> 

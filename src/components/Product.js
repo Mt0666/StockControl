@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "../style/product.css"
+
 
 
 const Product = ({ product, onUpdate, onDelete, productId }) => {
@@ -38,7 +40,7 @@ const Product = ({ product, onUpdate, onDelete, productId }) => {
                         <input type='number' name="quantity" value={editedProduct.quantity} onChange={handleChange} />
                     </td>
                     <td>
-                        <button className='btn btn-outline-dark' onClick={()=>{handleSave(productId)}}>Save</button>
+                        <button className='btn btn-success' onClick={()=>{handleSave(productId)}}>Save</button>
                     </td>
                 </tr>
             ) : (
@@ -53,8 +55,8 @@ const Product = ({ product, onUpdate, onDelete, productId }) => {
                         {product.quantity}
                     </td>
                     <td>
-                        <button className='btn btn-outline-dark' onClick={()=>{handleEdit(productId)}}>Edit</button>
-                        <button className='btn btn-outline-dark' onClick={()=>{handleDelete(productId)}}>Delete</button>
+                        <button className='btn btn-outline-primary' onClick={()=>{handleEdit(productId)}}>Edit</button>
+                        <button className='btn btn-outline-danger' onClick={()=>{handleDelete(productId)}}>Delete</button>
                     </td>
                 </tr>
             )}

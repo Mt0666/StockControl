@@ -3,6 +3,8 @@ import Product from './Product';
 import ProductForm from './ProductForm'; // ProductForm bileşenini burada içe aktardık
 import { Navigate } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import "../style/product.css"
+
 
 
 const Products = () => {
@@ -127,19 +129,20 @@ const Products = () => {
     return (
         !isLogin ? <Navigate to="/login"/> : <div className='d-flex flex-column'>
         {alert !== '' ? alert : ''}
-        <div className='d-flex mt-3'>
+        <div className='d-flex '>
+        <button className='btn btn-outline-danger ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Orders</button>
             <h2 className='text-center flex-grow-1 m-0'>Product List</h2>
-            <button className='btn btn-outline-dark ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Log Out</button>
+            <button className='btn btn-outline-danger ms-auto align-self-end me-2' onClick={()=>{localStorage.clear();setIsLogin(false)}}>Logout</button>
         </div>
         <ProductForm onAddProduct={saveProduct} /> {/* ProductForm bileşenini burada kullandık */}
         <SearchBar  onSearch={searchProduct}/> 
         <table className="table table-striped">
-            <thead>
+            <thead >
                 <tr>
                     <th scope="col">Referance</th>
                     <th scope="col">Name</th>
                     <th scope="col">Quantity</th>
-                    <th scope="col">Edit</th>
+                    <th scope="col">Edit-Delete</th>
                 </tr>
             </thead>
             <tbody>
