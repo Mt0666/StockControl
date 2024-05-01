@@ -1,70 +1,35 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Stock Kontrol Uygulaması</h2>
+<img src= StockControl.png>
+Bu proje, stok yönetimini kolaylaştırmak için geliştirilmiş bir web uygulamasıdır. Kullanıcılar, stoktaki ürünleri görüntüleyebilir, düzenleyebilir, silebilir ve yeni ürünler ekleyebilirler. Ayrıca, azalan stoklara dair uyarılar alabilirler ve bu ürünleri öncelikli olarak görüntüleyebilirler. Aşağıda uygulamanın bazı temel özellikleri ve kullanım talimatları yer almaktadır.
 
-## Available Scripts
+<h4>Özellikler</h4>
+<p>Kullanıcı Girişi: Kullanıcı adı ve şifre ile giriş yapılabilir.</p>
+<p>Stok Tablosu: Stoktaki tüm ürünleri referans, isim ve adet olarak görüntüleyebilir, düzenleyebilir, silebilir ve yeni ürünler ekleyebilirsiniz.</p>
+<p>Azalan Stoklar: Azalan stoklara dair bilgileri ayrı bir tabloda görüntüleyebilir ve bu ürünleri düzenleyebilirsiniz.</p>
+<p>Arama: Hem stok tablosunda hem de azalan stoklar tablosunda ürün araması yapabilirsiniz.</p>
+<p>Stok Düzenleme: Herhangi bir ürünün referansını, ismini veya adedini düzenleyebilirsiniz.</p>
+<p>Ürün Silme: İstediğiniz ürünü stoktan silebilirsiniz.</p>
+<p>Azalan Stok Bildirimi: Belirli bir eşiğin altındaki stok miktarları için otomatik bildirim alabilirsiniz.</p>
+<p>Duyarlı Tasarım: Uygulama, farklı ekran boyutlarına uyum sağlamak için duyarlı tasarıma sahiptir.</p>
+<h4>Kullanım Talimatları</h4>
+<p>Giriş Yapın: Kullanıcı adı ve şifrenizle uygulamaya giriş yapın.</p>
+<p>Stokları Görüntüleyin: Ana sayfada stok tablosunu ve azalan stoklar tablosunu göreceksiniz.</p>
+<p>Ürün Düzenleme/Silme: Herhangi bir ürünün üzerine tıklayarak düzenleme veya silme işlemlerini gerçekleştirebilirsiniz.</p>
+<p>Yeni Ürün Ekleme: "Ürün Ekle" düğmesine tıklayarak yeni bir ürün ekleyebilirsiniz.</p>
+<p>Azalan Stoklar: Azalan stoklar sekmesine tıklayarak azalan stokları görüntüleyebilir ve düzenleyebilirsiniz.</p>
+<p>Arama Yapın: Arama çubuğunu kullanarak istediğiniz ürünü bulabilirsiniz.</p>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
